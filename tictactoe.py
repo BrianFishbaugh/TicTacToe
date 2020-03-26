@@ -1,6 +1,7 @@
 ##### TIC TAC TOE: 
     ## 1) Create a Board of Blanks: 
     ## 2) Allow a User to select a Space that they want to play their letter in
+        #Handle Invalid Input
     ## 3) Have the Computer Choose a Space Randomly
         ## Unless Specific Moves are Available
     ## 4) Determine a Winner
@@ -261,5 +262,53 @@ def player_turn(game_board):
             return game_board
             z = False
 
-player_turn(game_board)
+def determine_winner(game_board):
+    #Across the Top
+    if game_board['7'] == game_board['8'] and game_board['8'] == game_board['9'] and game_board['8'] != '_':
+        if game_board['7'] == 'X':
+            print("Player Wins")
+        else:
+            print("Computer Wins")
+    #across The Middle
+    if game_board['4'] == game_board['5'] and game_board['5'] == game_board['6'] and game_board['5'] != '_':
+        if game_board['4'] == 'X':
+            print("Player Wins")
+        else:
+            print("Computer Wins")
+    #Across the Bottom
+    if game_board['1'] == game_board['2'] and game_board['3'] == game_board['1'] and game_board['1'] != '_':
+        if game_board['1'] == 'X':
+            print("Player Wins")
+        else:
+            print("Computer Wins")
+    #Left Column
+    if game_board['1'] == game_board['4'] and game_board['7'] == game_board['4'] and game_board['4'] != '_':
+        if game_board['4'] == 'X':
+            print("Player Wins")
+        else:
+            print("Computer Wins")
+    #Middle Column
+    if game_board['8'] == game_board['5'] and game_board['2'] == game_board['5'] and game_board['8'] != '_':
+        if game_board['5'] == 'X':
+            print("Player Wins")
+        else:
+            print("Computer Wins")
+    #Right Column
+    if game_board['4'] == game_board['1'] and game_board['1'] == game_board['9'] and game_board['1'] != '_':
+        if game_board['4'] == 'X':
+            print("Player Wins")
+        else:
+            print("Computer Wins")
+    #Left to Right Diagonal
+    if game_board['7'] == game_board['5'] and game_board['3'] == game_board['3'] and game_board['5'] != '_':
+        if game_board['7'] == 'X':
+            print("Player Wins")
+        else:
+            print("Computer Wins")
+    #Right to Left Diagonal
+    if game_board['1'] == game_board['5'] and game_board['5'] == game_board['9'] and game_board['5'] != '_':
+        if game_board['4'] == 'X':
+            print("Player Wins")
+        else:
+            print("Computer Wins")
 
