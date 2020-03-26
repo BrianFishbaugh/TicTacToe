@@ -34,19 +34,29 @@ def computer_placement(game_board):
     print_board(game_board)
     
     random_number = random.randint(0, 3) 
-    print(random_number)
+    ## Goes After Winning Move First
+
+    ## Blocks Winning Move Second
+
+    ### Goes After Corner Slots if Open and No winning / Stop From Winning turns are available
     if random_number == 0 and game_board['7'] == '_':
         game_board['7'] = 'O'
+        return game_board
     if random_number == 1 and game_board['9'] == '_':
         game_board['9'] = 'O'
+        return game_board
     if random_number == 2 and game_board['1'] == '_':
         game_board['1'] = 'O'
+        return game_board
     if random_number == 3 and game_board['3'] == '_':
         game_board['3'] = 'O'
+        return game_board
+
+    ## Goes After Middle Move as Fourth Option
+
+    ## Places Randomly Otherwise
 
     print("_______________________")
     print_board(game_board)
-
-computer_placement(game_board)
 
 
