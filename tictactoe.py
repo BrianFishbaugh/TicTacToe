@@ -247,15 +247,19 @@ def computer_play(game_board):
 
 def player_turn(game_board): 
     z = True
-    print("Where Do you Want to Place Your Letter?")
     while z == True:
+        print("Where Do you Want to Place Your Letter?")
         player_input = input()
-        game_board[player_input] = 'X'
-        print_board(game_board)
-        return game_board
-        z = False
+
+        if game_board.get(player_input) == None:
+            print("Invalid Option")
+            z == True
+
+        else:
+            game_board[player_input] = 'X'
+            print_board(game_board)
+            return game_board
+            z = False
 
 player_turn(game_board)
-
-
 
