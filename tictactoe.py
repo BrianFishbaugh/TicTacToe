@@ -34,7 +34,24 @@ def computer_placement(game_board):
     print_board(game_board)
     
     random_number = random.randint(0, 3) 
-    ## Goes After Winning Move First
+    ## Goes After Winning Move First ##
+    #Across the Top
+    if game_board['7'] == game_board['8'] and game_board['9'] == '_':
+        game_board['9'] == 'O'
+        return game_board
+    if game_board['7'] == game_board['9'] and game_board['8'] == '_':
+        game_board['8'] == 'O'
+        return game_board
+    if game_board['8'] == game_board['9'] and game_board['7'] == '_':
+        game_board['7'] == 'O'
+        return game_board
+    #Across the Middle
+    #Across The Bottom
+    #Left Column
+    #Middle Colum
+    #Right Column
+    #Left to Right Diaganal
+    #Right to Left Diagonal
 
     ## Blocks Winning Move Second
 
