@@ -30,7 +30,7 @@ def determine_first_turn():
         print(first_play + " Goes First")
         return first_play
 
-def computer_placement(game_board):
+def computer_play(game_board):
     print_board(game_board)
     
     random_number = random.randint(0, 3) 
@@ -45,11 +45,62 @@ def computer_placement(game_board):
     if game_board['8'] == game_board['9'] and game_board['7'] == '_':
         game_board['7'] == 'O'
         return game_board
+
     #Across the Middle
+    if game_board['4'] == game_board['5'] and game_board['6'] == '_':
+        game_board['6'] == 'O'
+        return game_board
+    if game_board['4'] == game_board['6'] and game_board['5'] == '_':
+        game_board['5'] == 'O'
+        return game_board
+    if game_board['5'] == game_board['6'] and game_board['4'] == '_':
+        game_board['4'] == 'O'
+        return game_board
+
     #Across The Bottom
+    if game_board['1'] == game_board['2'] and game_board['3'] == '_':
+        game_board['3'] == 'O'
+        return game_board
+    if game_board['1'] == game_board['3'] and game_board['2'] == '_':
+        game_board['2'] == 'O'
+        return game_board
+    if game_board['2'] == game_board['3'] and game_board['1'] == '_':
+        game_board['1'] == 'O'
+        return game_board
+
     #Left Column
+        if game_board['7'] == game_board['4'] and game_board['1'] == '_':
+        game_board['1'] == 'O'
+        return game_board
+    if game_board['7'] == game_board['1'] and game_board['4'] == '_':
+        game_board['4'] == 'O'
+        return game_board
+    if game_board['4'] == game_board['1'] and game_board['7'] == '_':
+        game_board['7'] == 'O'
+        return game_board
+
     #Middle Colum
+    if game_board['8'] == game_board['5'] and game_board['2'] == '_':
+        game_board['2'] == 'O'
+        return game_board
+    if game_board['8'] == game_board['2'] and game_board['5'] == '_':
+        game_board['5'] == 'O'
+        return game_board
+    if game_board['5'] == game_board['2'] and game_board['8'] == '_':
+        game_board['8'] == 'O'
+        return game_board
+
     #Right Column
+    if game_board['9'] == game_board['6'] and game_board['3'] == '_':
+        game_board['3'] == 'O'
+        return game_board
+    if game_board['9'] == game_board['3'] and game_board['6'] == '_':
+        game_board['6'] == 'O'
+        return game_board
+    if game_board['6'] == game_board['3'] and game_board['9'] == '_':
+        game_board['9'] == 'O'
+        return game_board
+
     #Left to Right Diaganal
     #Right to Left Diagonal
 
