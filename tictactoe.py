@@ -34,6 +34,7 @@ def computer_play(game_board):
     print_board(game_board)
     
     random_number = random.randint(0, 3) 
+
                         ######## Goes After Winning Move First ########
     #Across the Top
     if game_board['7'] == game_board['8'] and game_board['9'] == '_' and game_board['7'] == 'O':
@@ -122,10 +123,9 @@ def computer_play(game_board):
     if game_board['5'] == game_board['1'] and game_board['9'] == '_' and game_board['5'] == 'O':
         game_board['9'] == 'O'
         return game_board
+    
 
-
-
-                            ########## Blocks Winning Move Second #########
+    ########## Blocks Winning Move Second #########
     if game_board['7'] == game_board['8'] and game_board['9'] == '_' and game_board['7'] == 'X':
         game_board['9'] == 'O'
         return game_board
@@ -213,7 +213,7 @@ def computer_play(game_board):
         game_board['9'] == 'O'
         return game_board
 
-    ### Goes After Corner Slots if Open and No winning / Stop From Winning turns are available
+    ##### Goes After Corner Slots if Open and No winning / Stop From Winning turns are available
     if random_number == 0 and game_board['7'] == '_' :
         game_board['7'] = 'O'
         return game_board
@@ -227,11 +227,24 @@ def computer_play(game_board):
         game_board['3'] = 'O'
         return game_board
 
-
-
-    ## Goes After Middle Move as Fourth Option
+    ###### Goes After Middle Move as Fourth Option ########
+    if game_board['7'] != '_' and game_board['9'] != '_' and game_board['1'] != '_' and game_board['3'] != '_':
+        game_board['5'] = 'O'
+        return game_board
 
     ## Places Randomly Otherwise
+    if random_number == 0 and game_board['8'] == '_' :
+        game_board['8'] = 'O'
+        return game_board
+    if random_number == 1 and game_board['4'] == '_':
+        game_board['4'] = 'O'
+        return game_board
+    if random_number == 2 and game_board['6'] == '_':
+        game_board['6'] = 'O'
+        return game_board
+    if random_number == 3 and game_board['2'] == '_':
+        game_board['2'] = 'O'
+        return game_board
 
     print("_______________________")
     print_board(game_board)
