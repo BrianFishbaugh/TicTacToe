@@ -30,3 +30,23 @@ def determine_first_turn():
         print(first_play + " Goes First")
         return first_play
 
+def computer_placement(game_board):
+    print_board(game_board)
+    
+    random_number = random.randint(0, 3) 
+    print(random_number)
+    if random_number == 0 and game_board['7'] == '_':
+        game_board['7'] = 'O'
+    if random_number == 1 and game_board['9'] == '_':
+        game_board['9'] = 'O'
+    if random_number == 2 and game_board['1'] == '_':
+        game_board['1'] = 'O'
+    if random_number == 3 and game_board['3'] == '_':
+        game_board['3'] = 'O'
+
+    print("_______________________")
+    print_board(game_board)
+
+computer_placement(game_board)
+
+
