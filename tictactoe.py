@@ -18,7 +18,6 @@ def print_board(game_board):
     print('-+-+-')
     print(game_board['1'] + '|' + game_board['2'] + '|' + game_board['3'])
 
-
 def determine_first_turn():
     random_number = random.randint(0, 1)
     if random_number == 0:
@@ -246,7 +245,17 @@ def computer_play(game_board):
         game_board['2'] = 'O'
         return game_board
 
-    print("_______________________")
-    print_board(game_board)
+def player_turn(game_board): 
+    z = True
+    print("Where Do you Want to Place Your Letter?")
+    while z == True:
+        player_input = input()
+        game_board[player_input] = 'X'
+        print_board(game_board)
+        return game_board
+        z = False
+
+player_turn(game_board)
+
 
 
