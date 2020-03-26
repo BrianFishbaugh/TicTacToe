@@ -34,80 +34,187 @@ def computer_play(game_board):
     print_board(game_board)
     
     random_number = random.randint(0, 3) 
-    ## Goes After Winning Move First ##
+                        ######## Goes After Winning Move First ########
     #Across the Top
-    if game_board['7'] == game_board['8'] and game_board['9'] == '_':
+    if game_board['7'] == game_board['8'] and game_board['9'] == '_' and game_board['7'] == 'O':
         game_board['9'] == 'O'
         return game_board
-    if game_board['7'] == game_board['9'] and game_board['8'] == '_':
+    if game_board['7'] == game_board['9'] and game_board['8'] == '_' and game_board['7'] == 'O':
         game_board['8'] == 'O'
         return game_board
-    if game_board['8'] == game_board['9'] and game_board['7'] == '_':
+    if game_board['8'] == game_board['9'] and game_board['7'] == '_' and game_board['8'] == 'O':
         game_board['7'] == 'O'
         return game_board
 
     #Across the Middle
-    if game_board['4'] == game_board['5'] and game_board['6'] == '_':
+    if game_board['4'] == game_board['5'] and game_board['6'] == '_' and game_board['4'] == 'O':
         game_board['6'] == 'O'
         return game_board
-    if game_board['4'] == game_board['6'] and game_board['5'] == '_':
+    if game_board['4'] == game_board['6'] and game_board['5'] == '_' and game_board['4'] == 'O':
         game_board['5'] == 'O'
         return game_board
-    if game_board['5'] == game_board['6'] and game_board['4'] == '_':
+    if game_board['5'] == game_board['6'] and game_board['4'] == '_' and game_board['5'] == 'O':
         game_board['4'] == 'O'
         return game_board
 
     #Across The Bottom
-    if game_board['1'] == game_board['2'] and game_board['3'] == '_':
+    if game_board['1'] == game_board['2'] and game_board['3'] == '_' and game_board['1'] == 'O':
         game_board['3'] == 'O'
         return game_board
-    if game_board['1'] == game_board['3'] and game_board['2'] == '_':
+    if game_board['1'] == game_board['3'] and game_board['2'] == '_' and game_board['1'] == 'O':
         game_board['2'] == 'O'
         return game_board
-    if game_board['2'] == game_board['3'] and game_board['1'] == '_':
+    if game_board['2'] == game_board['3'] and game_board['1'] == '_' and game_board['2'] == 'O':
         game_board['1'] == 'O'
         return game_board
 
     #Left Column
-        if game_board['7'] == game_board['4'] and game_board['1'] == '_':
+    if game_board['7'] == game_board['4'] and game_board['1'] == '_' and game_board['7'] == 'O':
         game_board['1'] == 'O'
         return game_board
-    if game_board['7'] == game_board['1'] and game_board['4'] == '_':
+    if game_board['7'] == game_board['1'] and game_board['4'] == '_' and game_board['7'] == 'O':
         game_board['4'] == 'O'
         return game_board
-    if game_board['4'] == game_board['1'] and game_board['7'] == '_':
+    if game_board['4'] == game_board['1'] and game_board['7'] == '_' and game_board['4'] == 'O':
         game_board['7'] == 'O'
         return game_board
 
     #Middle Colum
-    if game_board['8'] == game_board['5'] and game_board['2'] == '_':
+    if game_board['8'] == game_board['5'] and game_board['2'] == '_' and game_board['8'] == 'O':
         game_board['2'] == 'O'
         return game_board
-    if game_board['8'] == game_board['2'] and game_board['5'] == '_':
+    if game_board['8'] == game_board['2'] and game_board['5'] == '_' and game_board['8'] == 'O':
         game_board['5'] == 'O'
         return game_board
-    if game_board['5'] == game_board['2'] and game_board['8'] == '_':
+    if game_board['5'] == game_board['2'] and game_board['8'] == '_' and game_board['5'] == 'O':
         game_board['8'] == 'O'
         return game_board
 
     #Right Column
-    if game_board['9'] == game_board['6'] and game_board['3'] == '_':
+    if game_board['9'] == game_board['6'] and game_board['3'] == '_' and game_board['9'] == 'O':
         game_board['3'] == 'O'
         return game_board
-    if game_board['9'] == game_board['3'] and game_board['6'] == '_':
+    if game_board['9'] == game_board['3'] and game_board['6'] == '_' and game_board['9'] == 'O':
         game_board['6'] == 'O'
         return game_board
-    if game_board['6'] == game_board['3'] and game_board['9'] == '_':
+    if game_board['6'] == game_board['3'] and game_board['9'] == '_' and game_board['6'] == 'O':
         game_board['9'] == 'O'
         return game_board
 
     #Left to Right Diaganal
-    #Right to Left Diagonal
+    if game_board['7'] == game_board['5'] and game_board['3'] == '_' and game_board['7'] == 'O':
+        game_board['3'] == 'O'
+        return game_board
+    if game_board['7'] == game_board['3'] and game_board['5'] == '_' and game_board['7'] == 'O':
+        game_board['5'] == 'O'
+        return game_board
+    if game_board['5'] == game_board['3'] and game_board['7'] == '_' and game_board['5'] == 'O':
+        game_board['7'] == 'O'
+        return game_board
 
-    ## Blocks Winning Move Second
+    #Right to Left Diagonal
+    if game_board['9'] == game_board['5'] and game_board['1'] == '_' and game_board['9'] == 'O':
+        game_board['1'] == 'O'
+        return game_board
+    if game_board['9'] == game_board['1'] and game_board['5'] == '_' and game_board['9'] == 'O':
+        game_board['8'] == 'O'
+        return game_board
+    if game_board['5'] == game_board['1'] and game_board['9'] == '_' and game_board['5'] == 'O':
+        game_board['9'] == 'O'
+        return game_board
+
+
+
+                            ########## Blocks Winning Move Second #########
+    if game_board['7'] == game_board['8'] and game_board['9'] == '_' and game_board['7'] == 'X':
+        game_board['9'] == 'O'
+        return game_board
+    if game_board['7'] == game_board['9'] and game_board['8'] == '_' and game_board['7'] == 'X':
+        game_board['8'] == 'O'
+        return game_board
+    if game_board['8'] == game_board['9'] and game_board['7'] == '_' and game_board['8'] == 'X':
+        game_board['7'] == 'O'
+        return game_board
+
+    #Across the Middle
+    if game_board['4'] == game_board['5'] and game_board['6'] == '_' and game_board['4'] == 'X':
+        game_board['6'] == 'O'
+        return game_board
+    if game_board['4'] == game_board['6'] and game_board['5'] == '_' and game_board['4'] == 'X':
+        game_board['5'] == 'O'
+        return game_board
+    if game_board['5'] == game_board['6'] and game_board['4'] == '_' and game_board['5'] == 'X':
+        game_board['4'] == 'O'
+        return game_board
+
+    #Across The Bottom
+    if game_board['1'] == game_board['2'] and game_board['3'] == '_' and game_board['1'] == 'X':
+        game_board['3'] == 'O'
+        return game_board
+    if game_board['1'] == game_board['3'] and game_board['2'] == '_' and game_board['1'] == 'X':
+        game_board['2'] == 'O'
+        return game_board
+    if game_board['2'] == game_board['3'] and game_board['1'] == '_' and game_board['2'] == 'X':
+        game_board['1'] == 'O'
+        return game_board
+
+    #Left Column
+    if game_board['7'] == game_board['4'] and game_board['1'] == '_' and game_board['7'] == 'X':
+        game_board['1'] == 'O'
+        return game_board
+    if game_board['7'] == game_board['1'] and game_board['4'] == '_' and game_board['7'] == 'X':
+        game_board['4'] == 'O'
+        return game_board
+    if game_board['4'] == game_board['1'] and game_board['7'] == '_' and game_board['4'] == 'X':
+        game_board['7'] == 'O'
+        return game_board
+
+    #Middle Colum
+    if game_board['8'] == game_board['5'] and game_board['2'] == '_' and game_board['8'] == 'X':
+        game_board['2'] == 'O'
+        return game_board
+    if game_board['8'] == game_board['2'] and game_board['5'] == '_' and game_board['8'] == 'X':
+        game_board['5'] == 'O'
+        return game_board
+    if game_board['5'] == game_board['2'] and game_board['8'] == '_' and game_board['5'] == 'X':
+        game_board['8'] == 'O'
+        return game_board
+
+    #Right Column
+    if game_board['9'] == game_board['6'] and game_board['3'] == '_' and game_board['9'] == 'X':
+        game_board['3'] == 'O'
+        return game_board
+    if game_board['9'] == game_board['3'] and game_board['6'] == '_' and game_board['9'] == 'X':
+        game_board['6'] == 'O'
+        return game_board
+    if game_board['6'] == game_board['3'] and game_board['9'] == '_' and game_board['6'] == 'X':
+        game_board['9'] == 'O'
+        return game_board
+
+    #Left to Right Diaganal
+    if game_board['7'] == game_board['5'] and game_board['3'] == '_' and game_board['7'] == 'X':
+        game_board['3'] == 'O'
+        return game_board
+    if game_board['7'] == game_board['3'] and game_board['5'] == '_' and game_board['7'] == 'X':
+        game_board['5'] == 'O'
+        return game_board
+    if game_board['5'] == game_board['3'] and game_board['7'] == '_' and game_board['5'] == 'X':
+        game_board['7'] == 'O'
+        return game_board
+
+    #Right to Left Diagonal
+    if game_board['9'] == game_board['5'] and game_board['1'] == '_' and game_board['9'] == 'X':
+        game_board['1'] == 'O'
+        return game_board
+    if game_board['9'] == game_board['1'] and game_board['5'] == '_' and game_board['9'] == 'X':
+        game_board['8'] == 'O'
+        return game_board
+    if game_board['5'] == game_board['1'] and game_board['9'] == '_' and game_board['5'] == 'X':
+        game_board['9'] == 'O'
+        return game_board
 
     ### Goes After Corner Slots if Open and No winning / Stop From Winning turns are available
-    if random_number == 0 and game_board['7'] == '_':
+    if random_number == 0 and game_board['7'] == '_' :
         game_board['7'] = 'O'
         return game_board
     if random_number == 1 and game_board['9'] == '_':
@@ -119,6 +226,8 @@ def computer_play(game_board):
     if random_number == 3 and game_board['3'] == '_':
         game_board['3'] = 'O'
         return game_board
+
+
 
     ## Goes After Middle Move as Fourth Option
 
